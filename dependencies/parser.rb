@@ -39,6 +39,7 @@ class Parser
                     {
                         name: product_title,
                         price: Nokogiri::HTML(product_html).xpath('//span[@id="price_display"]').text.gsub('€', '').strip!
+                        image: product_image
                     }
 
                     write_result_file(product)                   
